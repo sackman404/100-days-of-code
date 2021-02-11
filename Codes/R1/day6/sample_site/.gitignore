@@ -1,0 +1,4 @@
+db.*
+app1/migrations
+sample_site/__pycache__
+sample_site/settings.*

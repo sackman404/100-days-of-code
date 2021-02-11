@@ -1,0 +1,4 @@
+db.*
+django_website/settings.*
+django_website/__pycache__
+website/migrations
