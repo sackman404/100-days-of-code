@@ -1,26 +1,22 @@
 {% extends 'base.html' %}
 
+{load widget_tweaks}
+
 {% block content %}
 <div class="container">
 <form action="" method="POST">{% csrf_token %}
-    <!-- {{form.as_p}} -->
-    <div class="mb-3 mt-5">
-        <label for="formGroupExampleInput" class="form-label">Title</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" value="">
+    {{form}}
+    {% for item in form %}
+    <div class="form-group mt-5">
+        <input 
+            type="{{item.field.widget.input_type}}"
+            class="form-control" 
+            {% if item.field.required %}required{% endif %} 
+            value="{{item.value}}"
+            id="{{item.id_for_label}}">
     </div>
-
-    <div class="mb-3">
-        優先度
-        {{form.priority}}
-    </div>
-
-
-    <!-- <div class="mb-3">
-        <label for="formGroupExampleInput" class="form-label">締切日</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" value="{{ form.duedate.value }}">
-    </div> -->
-
-    <div class="d-grid gap-2">
+    {% endfor %}
+    <div class="d-grid gap-2 mt-5">
         <button class="btn btn-primary" type="submit">Update</button>
     </div>
 </form>
