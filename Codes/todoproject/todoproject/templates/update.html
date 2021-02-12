@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+<form action="" method="POST">{% csrf_token %}
+    <!-- {{form.as_p}} -->
+    <div class="mb-3 mt-5">
+        <label for="formGroupExampleInput" class="form-label">Title</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" value="">
+    </div>
+
+    <div class="mb-3">
+        優先度
+        {{form.priority}}
+    </div>
+
+
+    <!-- <div class="mb-3">
+        <label for="formGroupExampleInput" class="form-label">締切日</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" value="{{ form.duedate.value }}">
+    </div> -->
+
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary" type="submit">Update</button>
+    </div>
+</form>
+</div>
+
+{% endblock content %}
