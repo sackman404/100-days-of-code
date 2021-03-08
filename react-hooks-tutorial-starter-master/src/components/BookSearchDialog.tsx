@@ -1,5 +1,5 @@
 import React, { FC, useState, useEffect, useRef } from "react";
-import { BookDescription } from "./BookDescription";
+import { BookDescription } from "../BookDescription";
 import BookSearchItem from "./BookSearchItem";
 
 type BookSearchDialogProps = {

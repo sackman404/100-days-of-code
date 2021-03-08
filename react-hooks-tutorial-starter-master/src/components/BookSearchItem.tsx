@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { BookDescription } from "./BookDescription";
+import { BookDescription } from "../BookDescription";
 
 type BookSearchItemProps = {
   description: BookDescription;
