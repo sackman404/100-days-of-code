@@ -10,9 +10,6 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
-import IconButton from "@material-ui/core/IconButton";
-import MenuIcon from "@material-ui/icons/Menu";
-import { blue } from "@material-ui/core/colors";
 
 Modal.setAppElement("#root");
 
@@ -163,7 +160,7 @@ const App = () => {
         style={customStyle}
       >
         <BookSearchDialog
-          maxResults={40}
+          maxResults={20}
           onBookAdd={(b) => {
             handleBookAdd(b);
           }}

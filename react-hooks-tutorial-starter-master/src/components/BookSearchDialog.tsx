@@ -22,7 +22,6 @@ const BookSearchDialog: FC<BookSearchDialogProps> = (props) => {
         authorRef.current!.value,
         props.maxResults
       );
-      fetch(url);
       fetch(url)
         .then((res) => {
           return res.json();
